@@ -2,7 +2,7 @@ FROM alpine:3.10
 
 ENV TZ='America/Chicago'
 
-COPY https://download.technitium.com/dns/DnsServerPortable.tar.gz /
+ADD https://download.technitium.com/dns/DnsServerPortable.tar.gz /
 
 RUN apk update && apk upgrade && \
   apk add --no-cache tzdata && \
