@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2-alpine
 
 ENV TZ='America/Chicago'
 
@@ -10,4 +10,4 @@ RUN apk update && apk upgrade && \
   tar -zxf DnsServerPortable.tar.gz -C /etc/dns/
 
 WORKDIR /etc/dns
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["sh", "./start.sh"]
