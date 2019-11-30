@@ -1,7 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2-alpine
 
 ENV TZ='America/Chicago'
-EXPOSE
 
 ADD https://download.technitium.com/dns/DnsServerPortable.tar.gz /
 
